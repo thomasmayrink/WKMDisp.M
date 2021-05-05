@@ -8,11 +8,13 @@
     android:clickable="false">
 
     <Button
-        android:id="@+id/btnGameOver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnMenu"
+        android:layout_width="129dp"
+        android:layout_height="116dp"
         android:layout_marginTop="132dp"
-        android:text="Button"
+        android:text="MENU"
+        android:onClick="onClick"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:text="Voce perdeu"
+        android:text="Você Perdeu!"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -20,7 +20,8 @@ import javax.security.auth.Destroyable;
 
 public class Game extends View {
 
-    Bitmap character, hole;
+    Bitmap character;
+    Bitmap hole;
     int frames = 4;
 
     int currentFrame = 0;
@@ -37,28 +38,14 @@ public class Game extends View {
 
 
 
-    
-
-
-
-
     public Game(Context context){
         super(context);
 
-
-
-
-
         character = BitmapFactory.decodeResource(getResources(), R.drawable.characters);
-
-
-
-
+        hole = BitmapFactory.decodeResource(getResources(), R.drawable.hole);
 
 
     }
-
-
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -77,20 +64,6 @@ public class Game extends View {
         dstRect.bottom = dstRect.top + (character.getHeight() / 4);
 
         canvas.drawBitmap(character, srcRect, dstRect, null);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

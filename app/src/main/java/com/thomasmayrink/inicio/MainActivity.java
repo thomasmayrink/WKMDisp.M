@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
 
             Intent intent = new Intent( this, Mole.class);
             startActivity(intent);
-
+            finish();
 
         }
     }

@@ -13,7 +13,7 @@ public class Mole extends AppCompatActivity implements View.OnTouchListener {
 
     Game game;
 
-
+    boolean gameOverTrigger = false;
 
 
 
@@ -25,13 +25,6 @@ public class Mole extends AppCompatActivity implements View.OnTouchListener {
         setContentView(game);
 
         game.setOnTouchListener(this);
-
-
-
-
-
-
-
 
 
 
@@ -49,9 +42,10 @@ public class Mole extends AppCompatActivity implements View.OnTouchListener {
                     game.update();
 
                     game.invalidate();
-                }else
+                }else if(gameOverTrigger == false && game.gameover())
                     {
                         mudarcena();
+                        gameOverTrigger = true;
                     }
 
                 new Handler().postDelayed(this, 1000);
@@ -82,10 +76,9 @@ public class Mole extends AppCompatActivity implements View.OnTouchListener {
     public void mudarcena (){
         Intent intent = new Intent( this, Gameover.class);
         startActivity(intent);
+        finish();
+
     }
-
-
-
 
 
 
